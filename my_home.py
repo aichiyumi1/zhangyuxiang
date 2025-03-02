@@ -131,8 +131,8 @@ def page_3():
             st.image("大胆2.jpg")
     elif word == "原神启动":
         st.image("原神.jpeg")
-        word2 = st.text_input("请选择你要播放的音乐的序号（1-64）")
-        if word2 and word2.isdigit() and 1 <= int(word2) <= 64:
+        word2 = st.text_input("请选择你要播放的音乐的序号（1-30）")
+        if word2 and word2.isdigit() and 1 <= int(word2) <= 30:
             with open(f"{word2}.mp3", "rb") as f:
                 mymp3 = f.read()
             st.audio(mymp3, format="audio/mp3", start_time=0)
